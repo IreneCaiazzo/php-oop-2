@@ -18,6 +18,21 @@ class Toy extends Product
 
     public function printCard()
     {
-        return 'sono la card gioco' . ' ' . $this->name . '<br>';
+        return "
+            <div class=\"card\">
+                <img src=\"{$this->image}\" class=\"card-img-top\" alt=\"{$this->name}\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">{$this->image}</h5>
+                    <p class=\"card-text\">{$this->description}</p>
+                </div>
+                <ul class=\"list-group list-group-flush\">
+                    <li class=\"list-group-item\">Materiale: {$this->material}</li>
+                    <li class=\"list-group-item\">Colore: {$this->color}</li>
+                </ul>
+                <div class=\"card-body\">
+                    <a href=\"#\" class=\"card-link\">Details</a>
+                </div>
+            </div>
+        ";
     }
 }
