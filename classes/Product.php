@@ -3,17 +3,17 @@
 class Product
 {
     public function __construct(
-        private int $id,
-        private string $name,
-        private string $description,
-        private int $price,
-        private Category $category,
-        private string $image,
+        protected int $id,
+        protected string $name,
+        protected string $description,
+        protected int $price,
+        protected Category $category,
+        protected string $image,
     ) {
     }
 
     public function printCard()
     {
-        return 'sono la card';
+        return 'sono la card' . ' ' . $this->name . '<br>';
     }
 }

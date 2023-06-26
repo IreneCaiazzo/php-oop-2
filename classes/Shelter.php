@@ -10,10 +10,15 @@ class Shelter extends Product
         int $price,
         Category $category,
         string $image,
-        private int $height,
-        private int $width,
-        private int $lenght,
+        protected int $height,
+        protected int $width,
+        protected int $lenght,
     ) {
         parent::__construct($id, $name, $description, $price, $category, $image);
+    }
+
+    public function printCard()
+    {
+        return 'sono la card cuccia' . ' ' . $this->name . '<br>';
     }
 }

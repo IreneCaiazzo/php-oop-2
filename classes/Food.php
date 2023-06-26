@@ -11,8 +11,13 @@ class Food extends Product
         Category $category,
         string $image,
         protected string $expiry,
-        int $weight
+        protected int $weight
     ) {
         parent::__construct($id, $name, $description, $price, $category, $image);
+    }
+
+    public function printCard()
+    {
+        return 'sono la card cibo' . ' ' . $this->name . '<br>';
     }
 }

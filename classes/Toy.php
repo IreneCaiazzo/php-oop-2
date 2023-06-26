@@ -11,8 +11,13 @@ class Toy extends Product
         Category $category,
         string $image,
         protected string $material,
-        private string $color,
+        protected string $color,
     ) {
         parent::__construct($id, $name, $description, $price, $category, $image);
+    }
+
+    public function printCard()
+    {
+        return 'sono la card gioco' . ' ' . $this->name . '<br>';
     }
 }
