@@ -19,6 +19,7 @@ class Food extends Product
     public function printCard()
     {
         return "
+        <div class= \"col\">
             <div class=\"card\">
                 <img src=\"{$this->image}\" class=\"card-img-top\" alt=\"{$this->name}\">
                 <div class=\"card-body\">
@@ -33,6 +34,7 @@ class Food extends Product
                     <a href=\"#\" class=\"card-link\">Details</a>
                 </div>
             </div>
+        </div>
         ";
     }
 }
