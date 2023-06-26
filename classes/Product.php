@@ -12,7 +12,8 @@ class Product
     ) {
     }
 
-    public function printCard(){
-        return 'sono la card'
+    public function printCard()
+    {
+        return 'sono la card';
     }
 }
