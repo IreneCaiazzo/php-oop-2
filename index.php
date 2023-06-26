@@ -3,10 +3,7 @@ include_once __DIR__ . '/classes/Food.php';
 include_once __DIR__ . '/classes/Category.php';
 include_once __DIR__ . '/classes/Toy.php';
 include_once __DIR__ . '/classes/Shelter.php';
-
-$food = new Food(1, 'Croccantini', 'Cibo buono', 1000, new Category(), 'url', '2023-08-30', 300);
-$toy = new Toy(2, 'gioco', 'Cibo buono', 1000, new Category(), 'url', 'plastica', 'rosso');
-$shelter = new Shelter(3, 'Cuccetta', 'Cibo buono', 1000, new Category(), 'url', 500, 700, 600);
+include_once __DIR__ . '/db.php';
 
 ?>
 
@@ -23,11 +20,13 @@ $shelter = new Shelter(3, 'Cuccetta', 'Cibo buono', 1000, new Category(), 'url',
 
 <body>
     <div class="container">
-        <div class="row row-cols-3">
+        <div class="row row-cols-3 g-3">
             <?php
-            echo $food->printCard();
-            echo $toy->printCard();
-            echo $shelter->printCard();
+
+            foreach ($arrProducts as $objProduct) {
+                echo $objProduct->printCard();
+            }
+
             ?>
         </div>
     </div>
