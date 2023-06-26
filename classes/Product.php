@@ -11,4 +11,8 @@ class Product
         private string $image,
     ) {
     }
+
+    public function printCard(){
+        return 'sono la card'
+    }
 }
