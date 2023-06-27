@@ -18,6 +18,7 @@ class Toy extends Product
 
     public function printCard()
     {
+        $type = get_class($this);
         return "
             <div class= \"col\">
                 <div class=\"card\">
@@ -27,6 +28,8 @@ class Toy extends Product
                         <p class=\"card-text\">{$this->description}</p>
                     </div>
                     <ul class=\"list-group list-group-flush\">
+                        <li class=\"list-group-item\">Categoria: {$this->category->getName()}</li> 
+                        <li class=\"list-group-item\">Tipo: {$type}</li> 
                         <li class=\"list-group-item\">Materiale: {$this->material}</li>
                         <li class=\"list-group-item\">Colore: {$this->color}</li>
                     </ul>
